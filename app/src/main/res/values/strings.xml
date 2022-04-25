@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UAV Detection</string>
+    <string name="action_settings">设置</string>
+    <string name="disconnected">产品断开连接</string>
+    <string name="product_information">产品信息：无</string>
+    <string name="connection_loose">设备未连接</string>
+    <string name="sdk_version">DJI SDK Version: %1$s</string>
+    <string name="default_status">连接状态：无设备连接</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="author">作 者：李 韬</string>
+
+</resources>

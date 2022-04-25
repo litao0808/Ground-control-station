@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?><!-- TODO orientation设置为水平，map视图越界，且难以debug，注意一下 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dji.UAVDetection.GaodeFragment">
+
+    <com.amap.api.maps2d.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"/>
+
+    <LinearLayout
+        android:id="@+id/gdBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/enable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="点击添加"
+            android:textSize="10dp" />
+
+        <!--将飞机当前位置，在地图上标点，并且加入航路-->
+        <Button
+            android:id="@+id/add_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            android:text="添加当前点"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/config"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="配置"
+            android:textSize="10dp" />
+
+
+
+
+        <Button
+            android:id="@+id/upload"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="预备"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="开始"
+            android:textSize="10dp" />
+
+
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="停止"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/locate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="无人机位置"
+            android:textSize="10dp" />
+
+
+
+
+
+        <Button
+            android:id="@+id/read_pos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="读取目标"
+            android:textSize="10dp" />
+        <Button
+            android:id="@+id/read_fly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="读取航点"
+            android:textSize="10dp" />
+        <Button
+            android:id="@+id/route"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="规划航线"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/read_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:text="读取结果"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/clear_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:text="清除结果"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/clear_fly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="清除航点"
+            android:textSize="10dp" />
+        <Button
+            android:id="@+id/delete_pos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="清除目标"
+            android:textSize="10dp" />
+        <Button
+            android:id="@+id/clear_point"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="清除地图"
+            android:textSize="10dp" />
+        <Button
+            android:id="@+id/replace"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="清除任务"
+            android:textSize="10dp" />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</FrameLayout>

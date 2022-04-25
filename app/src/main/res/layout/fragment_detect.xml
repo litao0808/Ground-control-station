@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dji.UAVDetection.DetectionFragment">
+
+
+    <TextureView
+        android:id="@+id/video_previewer_surface1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+    <SurfaceView
+        android:id="@+id/surfaceview1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+    <!--UX-SDK-->
+    <RelativeLayout
+        android:id="@+id/uxsdk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <dji.ux.workflow.CompassCalibratingWorkFlow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/signal"
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <!-- Top bar 2-->
+        <LinearLayout
+            android:id="@+id/camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <dji.ux.widget.AutoExposureLockWidget
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <dji.ux.widget.FocusExposureSwitchWidget
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <dji.ux.widget.FocusModeWidget
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <dji.ux.widget.config.CameraConfigISOAndEIWidget
+                android:layout_width="60dp"
+                android:layout_height="30dp" />
+
+            <dji.ux.widget.config.CameraConfigShutterWidget
+                android:layout_width="60dp"
+                android:layout_height="30dp" />
+
+            <dji.ux.widget.config.CameraConfigApertureWidget
+                android:layout_width="60dp"
+                android:layout_height="30dp" />
+
+            <dji.ux.widget.config.CameraConfigEVWidget
+                android:layout_width="60dp"
+                android:layout_height="30dp" />
+
+            <dji.ux.widget.config.CameraConfigWBWidget
+                android:layout_width="70dp"
+                android:layout_height="30dp" />
+
+            <dji.ux.widget.config.CameraConfigStorageWidget
+                android:layout_width="130dp"
+                android:layout_height="30dp" />
+        </LinearLayout>
+
+        <dji.ux.widget.ManualFocusWidget
+            android:layout_width="42dp"
+            android:layout_height="218dp"
+            android:layout_below="@id/camera"
+            android:layout_alignLeft="@id/camera"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
+            tools:ignore="RtlHardcoded" />
+
+        <!-- right -->
+        <dji.ux.widget.controls.CameraControlsWidget
+            android:id="@+id/CameraCapturePanel"
+            android:layout_width="50dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/camera"
+            android:layout_alignParentRight="true"
+            tools:ignore="RtlHardcoded" />
+
+        <!-- MENU top-->
+        <dji.ux.panel.CameraSettingExposurePanel
+            android:layout_width="180dp"
+            android:layout_height="263dp"
+            android:layout_below="@id/camera"
+            android:layout_toLeftOf="@+id/CameraCapturePanel"
+            android:gravity="center"
+            android:visibility="invisible"
+            tools:ignore="RtlHardcoded" />
+
+        <!-- MENU bottom-->
+        <dji.ux.panel.CameraSettingAdvancedPanel
+            android:layout_width="180dp"
+            android:layout_height="263dp"
+            android:layout_below="@id/camera"
+            android:layout_toLeftOf="@+id/CameraCapturePanel"
+            android:gravity="center"
+            android:visibility="invisible"
+            tools:ignore="RtlHardcoded" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/detectBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+
+        <Button
+            android:id="@+id/detectButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一次检测"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/detectButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="二次检测"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/detectButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YOLOv5s"
+            android:visibility="gone"
+            android:textSize="10dp" />
+        <Button
+            android:id="@+id/btn_return1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

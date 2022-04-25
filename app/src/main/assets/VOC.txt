@@ -1,0 +1,15 @@
+fragment
+bottle
+box
+stone
+ball
+card
+screwdriver
+comb
+tape
+wrench
+plastic_bag
+school_bag
+handbag
+rubber
+ruler

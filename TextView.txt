@@ -1,0 +1,7 @@
+启动时：onSurfaceTextureAvailable
+
+更新帧时调用：onSurfaceTextureUpdated
+
+更新的帧将buffer填满时候调用：onSurfaceTextureSizeChanged
+
+销毁时候调用：onSurfaceTextureDestroyed
